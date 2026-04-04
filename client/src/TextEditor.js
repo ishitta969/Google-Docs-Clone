@@ -33,7 +33,8 @@ export default function TextEditor() {
   }))
 
   useEffect(() => {
-    const s = io(process.env.REACT_APP_BACKEND_URL || "http://localhost:3001")
+    // const s = io(process.env.REACT_APP_BACKEND_URL || "http://localhost:3001")
+    const s = io(process.env.REACT_APP_API_URL)
     setSocket(s)
 
     return () => {
